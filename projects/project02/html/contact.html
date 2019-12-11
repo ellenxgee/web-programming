@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Ellen Gee</title>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../css/contact.css">
+  </head>
+
+  <body>
+    <h1>Ellen Gee</h1>
+		<div class="topnav">
+      <a href="index.html">home</a>
+      <a href="about.html">about me</a>
+      <a href="creative.html">creative work</a>
+      <a href="travel.html">travel</a>
+      <a href="portfolio.html">portfolio</a>
+      <a class="active" href="contact.html">contact me</a>
+    </div>
+
+    <img id="profile-pic" src="../img/ellengee.jpg" alt="Image of Ellen Gee">
+
+    <h2>Get in Contact with me</h2>
+    <p>I would love to hear from you, collaborate with you, and grow together!</p>
+
+    <form action="/form-handler" method="post">
+      <fieldset>
+        <legend>General Information</legend>
+        <ul>
+          <li>
+            <label for="name">Full Name:</label>
+            <input type="text" id="fullname" name="fullname"><br>
+          </li>
+          <li>
+            <label for="emailaddr">Email:</label>
+            <input type="email" id="emailaddr" name="emailaddr"><br>
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset>
+        <legend>Additional Information</legend>
+        <ul>
+          <li>
+            <p>How did you find me?<br>
+              <select name="where">
+                <option>Prefer not to say</option>
+                <optgroup label="Social Media">
+                  <option>Instagram</option>
+                  <option>YouTube</option>
+                  <option>Facebook</option>
+                  <option>LinkedIn</option>
+                </optgroup>
+                <optgroup label="In-Person">
+                  <option>Job Fair</option>
+                  <option>Mutual Connection</option>
+                  <option>Random Run-in</option>
+                </optgroup>
+              </select>
+            </p>
+          </li>
+          <li>
+            <p>Why do you want to contact me?<br>
+              <textarea name="why" rows="6" cols="50">You can decline to answer.</textarea>
+            </p>
+          </li>
+        </ul>
+      </fieldset>
+
+      <br>
+      <div class="buttons">
+        <button type="submit">Hit it to submit it!</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+
+    <footer>
+      <p>
+        Connect with me!
+        <a href="https://www.instagram.com/theellengee/" target="_blank"><img src="../img/instagram_logo.png" height="25"></a>
+        <a href="https://www.linkedin.com/in/ellen-gee-0b040470/" target="_blank"><img src="../img/linkedin_logo.png" height="25"></a>
+      </p>
+    </footer>
+  </body>
+
+  <script>
+    window.onsubmit = function() {
+      alert("Thanks for reaching out, I'll get back to you as soon as I can!");
+    }
+  </script>
+</html>

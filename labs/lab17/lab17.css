@@ -1,0 +1,78 @@
+@media (min-width: 576px) {
+  h1 {
+    font-family: "Brush Script MT", Script;
+    font-weight: lighter;
+    font-size: 2em;
+    text-align: center;
+    text-transform: lowercase;
+    background-color: mistyrose;
+  }
+
+  a img {
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 20%;
+    margin-bottom: 20%;
+    transform: rotate(45deg);
+  }
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-family: "Brush Script MT", Script;
+    font-weight: lighter;
+    font-size: 3.5em;
+    text-align: center;
+    text-transform: lowercase;
+    letter-spacing: 1.5em;
+    background-color: lightsteelblue;
+  }
+
+  a img {
+    width: 500px;
+    margin: 10px 100px;
+    transform: skew(-15deg);
+  }
+}
+
+.transition {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  padding: 1em 2em;
+  width: 50%;
+  border-radius: 1.5em;
+  color: white;
+  background-color: teal;
+  transition-property: background-color;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+}
+
+.transition:hover, .transition:focus {
+  background-color: gold;
+}
+
+ul {
+  width: 80%;
+  list-style-type: none;
+  perspective: 800px;
+}
+
+li {
+  float: left;
+  margin-right: 10px;
+  width: 20%;
+  transform: rotateY(45deg);
+}
+
+@keyframes textsize {
+  0% { font-size: 0.5em; }
+  50% { font-size: 1em; }
+  100% { font-size: 2em; }
+}
+
+#grow {
+  margin-top: 50%;
+  animation: textsize 5s linear infinite alternate;
+}

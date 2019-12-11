@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Lab 6</title>
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+    <h1>Lab 6</h1>
+    <form action="/form-handler" method="post">
+      <label for="name">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" placeholder="Jane Doe"><br>
+
+      <label for="bday">Birthdate:</label>
+      <input type="date" id="bday" name="bday"><br>
+
+      <label>Check if you like checking things:
+        <input type="checkbox" id="check" name="check">
+      </label><br>
+
+      <label for="cellnum">Can I get your digits (aka phone number)?</label>
+      <input type="tel" id="cellnum" name="cellnum"><br>
+
+      <p>How much wood could a wood chuck chuck if a wood chuck could chuck wood?
+        <select name="wood">
+          <option>A little</option>
+          <option>Some</option>
+          <option>Enough</option>
+          <option>More than me</option>
+          <option>A whole lot</option>
+          <option>All of the wood</option>
+        </select>
+      </p>
+
+      <p>Which store(s) do you like shopping at?<br>
+        <select name="stores" size="7" multiple>
+          <optgroup label="Clothing">
+            <option>Urban Outfitters</option>
+            <option>Pac Sun</option>
+            <option>American Eagle</option>
+            <option>Target</option>
+            <option>TJ Maxx</option>
+            <option>Gucci</option>
+          </optgroup>
+          <optgroup label="Furniture">
+            <option>IKEA</option>
+            <option>Room & Board</option>
+            <option>Home Goods</option>
+          </optgroup>
+          <optgroup label="Electronics">
+            <option>Best Buy</option>
+            <option>Walmart</option>
+            <option>Amazon</option>
+          </optgroup>
+        </select>
+      </p>
+
+      <p>Tell me how you really feel:<br>
+        <em>No really, how was your day?</em><br>
+        <textarea name="feel" rows="6" cols="50">I'm fine. It was fine.</textarea>
+      </p>
+
+      <button type="submit">Hit it to submit it!</button>
+      <button type="reset">Cancelled</button>
+    </form>
+  </body>
+</html>

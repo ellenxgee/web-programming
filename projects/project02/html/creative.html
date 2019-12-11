@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Ellen Gee</title>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../css/creative.css">
+  </head>
+
+  <body>
+    <h1>Ellen Gee</h1>
+		<div class="topnav">
+      <a href="index.html">home</a>
+      <a href="about.html">about me</a>
+      <a class="active" href="creative.html">creative work</a>
+      <a href="travel.html">travel</a>
+      <a href="portfolio.html">portfolio</a>
+      <a href="contact.html">contact me</a>
+    </div>
+
+    <img id="profile-pic" src="../img/ellengee.jpg" alt="Image of Ellen Gee">
+
+    <br><br>
+    <div class="tab">
+      <button class="tablinks" onclick="openMedium(event, 'Photography')" id="defaultOpen">Photography</button>
+      <button class="tablinks" onclick="openMedium(event, 'Videography')">Videography</button>
+    </div>
+
+    <div id="Photography" class="tabcontent">
+      <h3>Albuquerque Hot Air Balloon Fiesta 2019</h3>
+      <div class="photo" id="balloon">
+        <img src="../img/IMG_0112.JPG" alt="two hot air balloons ready to fly">
+        <img src="../img/IMG_0089.JPG" alt="one hot air balloon in the dark">
+      </div>
+
+      <h3>Fujifilm Instax Photos</h3>
+      <div class="photo" id="instax">
+        <img src="../img/instax_1.jpg" alt="girl in a marshmellow pit">
+        <img src="../img/instax_2.jpg" alt="girl on a boat at sunset">
+        <img src="../img/instax_3.jpg" alt="Taipei 101">
+        <img src="../img/instax_4.jpg" alt="Minneapolis Gold Medal Flour Building">
+      </div>
+
+      <h3>Graduation Photo Shoot</h3>
+      <div class="photo" id="grad">
+        <img src="../img/IMG_7072.jpg">
+        <img src="../img/IMG_7071.jpg">
+      </div>
+
+      <h3>MusicFest 2019</h3>
+      <div class="photo" id="musicfest">
+        <img src="../img/IMG_6599.jpg">
+        <img src="../img/IMG_6604.jpg">
+        <img src="../img/IMG_6603.jpg">
+      </div>
+      <br><br><br>
+    </div>
+
+    <div id="Videography" class="tabcontent">
+      <h3>Weekend Trip to Japan</h3>
+      <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/TDJhWVPlfck" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p>I studied abroad in Taiwan fall semester 2018, and during that semester I was also able to travel to Japan!<br>
+          Over a long weekend, my friends and I visited Osaka, Kyoto, and Nara.<br>
+          It was an amazing trip, and has become the most watched video on my YouTube channel with over 8.5K views.</p>
+      </div>
+
+      <h3>One Second a Day 2018</h3>
+      <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/9eAgGt0DrMo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p>I decided to document 2018 by filming one second of every day.<br>
+          I compiled all of those seconds into a six and a half minute video that captures so much more!<br>
+          As someone with pretty bad memory, this video has had the interesting effect of helping me remember more.<br>
+          Re-watching the video I can remember each day.
+        </p>
+      </div>
+
+      <h3>Adoption Home Video</h3>
+      <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/1rh1CbXHP1E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p>This video has a special place in my heart.<br>
+          When my parents went to China to adopt me, they filmed the trip.<br>
+          That footage sat untouched for 20 years.<br>
+          We finally got the tapes transfered into digital files, and I started editing.<br><br>
+          Of course, I cried a lot while editing and watching this video.<br>
+          It was really weird seeing myself as a baby (and my parents 20 years younger).</p>
+      </div>
+      <br><br><br>
+    </div>
+
+    <footer>
+      <p>
+        Connect with me!
+        <a href="https://www.instagram.com/theellengee/" target="_blank"><img src="../img/instagram_logo.png" height="25"></a>
+        <a href="https://www.linkedin.com/in/ellen-gee-0b040470/" target="_blank"><img src="../img/linkedin_logo.png" height="25"></a>
+      </p>
+    </footer>
+  </body>
+
+  <script>
+    document.getElementById("defaultOpen").click();
+    photoSizing();
+
+    function openMedium(evt, creativeMedium) {
+      var i, tabcontent, tablinks;
+
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+
+      document.getElementById(creativeMedium).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+
+    function photoSizing() {
+      var i, j, photos, numPhotos;
+      var catagories = document.getElementsByClassName("photo");
+      var numCatagories = catagories.length;
+
+      for(i=0; i<numCatagories; i++) {
+        photos = catagories[i].getElementsByTagName("img");
+        numPhotos = photos.length;
+
+        for(j=0; j<numPhotos; j++) {
+          photos[j].style.width = 100/numPhotos+"%";
+        }
+      }
+    }
+  </script>
+</html>

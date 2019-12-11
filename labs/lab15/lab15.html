@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Lab 15</title>
+    <meta charset="utf-8">
+    <style>
+      p img {
+        width: 50%;
+        margin: 2em;
+        box-shadow: 10px 10px 5px #666;
+      }
+      p {
+        background-color: lavender;
+        margin: 10px;
+      }
+      ul.bar {
+        background-color: lightsteelblue;
+      }
+      ul.bar li {
+        margin: 5px;
+        display: inline;
+      }
+      button {
+        display: block;
+      }
+      big {
+        position: relative;
+        bottom: 20em;
+        left: 4em;
+        font-weight: bold;
+      }
+      h2 {
+        position: absolute;
+        top: 150px;
+        left: 50px;
+      }
+      img#float {
+        float: left;
+        width: 50%;
+        margin-right: 0.5em;
+      }
+      h4 {
+        clear: left;
+        margin-top: 2em;
+      }
+      ul.navmenu {
+        position: fixed;
+        top: 50px;
+        left: 10px;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      ul.navmenu li {
+        float: left;
+      }
+      ul.navmenu li a {
+        display: block;
+        width: 250px;
+        text-align: center;
+        text-decoration: none;
+        padding: 5px 5px;
+        margin: 5px;
+        background-color: steelblue;
+        color: white;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+      }
+      #playlist {
+        background-color: mistyrose;
+        float: left;
+        margin-right: 5%;
+        width: 45%;
+      }
+      #shows {
+        background-color: yellow;
+        float: left;
+        width: 50%;
+      }
+      #red {
+        z-index: 50;
+        position: absolute;
+        bottom: 200px;
+        right: 150px;
+      }
+      #blue {
+        z-index: 10;
+        position: absolute;
+        bottom: 275px;
+        right: 100px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 id="title">Lab 15</h1>
+
+    <ul class="navmenu">
+      <li><a href="#title">Top of the Page</a></li>
+      <li><a href="#links">Horizontal list of links</a></li>
+      <li><a href="#absolute">Absolute position</a></li>
+    </ul>
+
+    <br><br>
+
+    <p>This is a photo of me at Deltas and Dogs, a philanthropy event put on by my sorority.<br>
+      <img src="IMG_0688.jpg" alt="Ellen Gee with a puppy">
+
+      <big>FLOATING!</big>
+    </p>
+
+    <h3 id="links">Horizontal list of links!</h3>
+    <ul class="bar">
+      <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+      <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+      <li><a href="https://www.pinterest.com/" target="_blank">Pinterest</a></li>
+    </ul>
+
+    <button>click me!</button>
+    <button>no, click me!</button>
+
+    <h2 id="absolute">Absolute position</h2>
+
+    <img id="float" src="IMG_0688.jpg" alt="Ellen Gee with a puppy">
+    <b>Time for text<br>but I want it under the picture...</b>
+    <h4>There we go! Now we're under the picture!</h4>
+
+    <div id="playlist">
+      <h3>Songs I've been Loving</h3>
+      <ul>
+        <li>Lights Up - Harry Styles</li>
+        <li>Fallingwater - Maggie Rogers</li>
+        <li>You and I - Ingrid Michaelson</li>
+      </ul>
+    </div>
+
+    <div id="shows">
+      <h3>TV Shows I like</h3>
+      <ul>
+        <li>Grey's Anatomy</li>
+        <li>Friends</li>
+        <li>The Ranch</li>
+        <li>The Good Place</li>
+      </ul>
+    </div>
+
+    <img id="red" src="red.png" alt="red square">
+    <img id="blue" src="blue.png" alt="blue square">
+  </body>
+</html>

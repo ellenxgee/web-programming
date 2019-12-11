@@ -1,0 +1,95 @@
+a:link  {
+  text-decoration: none;
+}
+
+a:hover {
+  color: mediumvioletred;
+  font-weight: bold;
+}
+
+tr:nth-of-type(even) {
+  background-color: lavender;
+}
+
+td:first-child {
+  text-align: left;
+}
+
+p#first::first-letter {
+  font-size: 3em;
+  color: steelblue;
+}
+
+p#first:after {
+  content: "I added this text with CSS! Isn't that wild!";
+  color: deeppink;
+}
+
+table[title="Finance"] {
+  border: 1px solid black;
+  text-align: center;
+}
+
+img[src$=".jpg"] {
+  height: 500px;
+  border-style: outset;
+  border-width: thick;
+  border-color: gold;
+}
+
+body {
+  background-image: url(https://i.pinimg.com/564x/60/87/99/6087998e89383d9184db17192c270e93.jpg);
+  background-repeat: repeat-x;
+  background-position: 0px 50px;
+}
+
+p#stary {
+  background-image: url(https://i.pinimg.com/564x/98/e9/6c/98e96c5cfa19ba7eda48e476ca436fc3.jpg);
+  background-attachment: fixed;
+  color: white;
+}
+
+h1#background-short {
+  background: white url(https://i.pinimg.com/564x/0b/8f/54/0b8f54ac45dc266a46de318e811eafdd.jpg) repeat-x left center local;
+  font-family: Courier;
+  text-align: center;
+}
+
+p#gradient {
+  background-image: linear-gradient(45deg, mediumvioletred, deeppink, hotpink, pink, mistyrose);
+  color: white;
+
+  width: 1000px;
+  height: 250px;
+  overflow: scroll;
+}
+
+p#bb {
+  background-color: lightcyan;
+  box-sizing: border-box;
+  width: 1000px;
+  height: 100%;
+  overflow: scroll;
+  border-style: dotted;
+  border-width: medium;
+  border-color: steelblue;
+}
+
+p {
+  padding: 20px;
+}
+
+p#round {
+  background-color: lightsteelblue;
+  border-radius: 25px;
+}
+
+p#custom {
+  background-color: mistyrose;
+  border: 5px solid deeppink;
+  border-image: url(border.png) 50 fill / 50px / 5px stretch;
+}
+
+ul {
+  background-color: white;
+}

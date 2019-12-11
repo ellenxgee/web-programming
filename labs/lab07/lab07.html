@@ -1,0 +1,36 @@
+<html lang="en">
+  <head>
+    <title>Lab 7</title>
+    <meta charset="utf-8">
+
+    <style type="text/css">
+      input:invalid {
+        background-color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Lab 7</h1>
+    <form action="/form-handler" method="post" autocomplete="on">
+      <!-- quantifier -->
+      <label for="excited">How excited are you? </label>
+      <input type="text" id="excited" placeholder="ahhh..." pattern="(ah+)">
+      <br><br>
+      <!-- boundary and alternation -->
+      <label for="favpet">Favorite Pet:</label>
+      <input type="text" id="favpet" pattern="^(dog|puppy)$">
+      <br><br>
+      <!-- character classes -->
+      <label for="phonenum">Phone Number: </label>
+      <input type="text" id="phonenum" placeholder="xxx xxx xxxx" pattern="\d\d\d\s\d\d\d\s\d\d\d\d">
+    </form>
+
+    <video src="ecs_sunset.mp4" width="640" height="360" controls autoplay></video>
+
+    <p>Play chill tunes: </p>
+    <audio id="chill" controls preload="auto">
+      <source src="chill_tunes.mp3" type="audio/mp3">
+    </audio>
+  </body>
+</html>

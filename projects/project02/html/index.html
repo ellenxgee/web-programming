@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Ellen Gee</title>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+  </head>
+
+  <body>
+    <h1>Ellen Gee</h1>
+		<div class="topnav">
+      <a class="active" href="index.html">home</a>
+      <a href="about.html">about me</a>
+      <a href="creative.html">creative work</a>
+      <a href="travel.html">travel</a>
+      <a href="portfolio.html">portfolio</a>
+      <a href="contact.html">contact me</a>
+    </div>
+
+    <img id="profile-pic" src="../img/ellengee.jpg" alt="Image of Ellen Gee">
+    <br>
+
+    <img class="homeSlides" src="../img/home_icecastles.jpg">
+    <img class="homeSlides" src="../img/home_wits.jpg">
+    <img class="homeSlides" src="../img/home_tridelta.jpg">
+    <img class="homeSlides" src="../img/home_parachute.jpg">
+
+    <footer>
+      <p>
+        Connect with me!
+        <a href="https://www.instagram.com/theellengee/" target="_blank"><img src="../img/instagram_logo.png" height="25"></a>
+        <a href="https://www.linkedin.com/in/ellen-gee-0b040470/" target="_blank"><img src="../img/linkedin_logo.png" height="25"></a>
+      </p>
+    </footer>
+  </body>
+
+  <script>
+    var slideIndex = 0;
+    photoCycle();
+
+    function photoCycle() {
+      var i;
+      var x = document.getElementsByClassName("homeSlides");
+      for(i=0; i<x.length; i++) {
+        x[i].style.display = "none";
+      }
+      slideIndex++;
+      if(slideIndex>x.length) { slideIndex=1; }
+      x[slideIndex-1].style.display = "block";
+      setTimeout(photoCycle, 3000);
+    }
+  </script>
+</html>

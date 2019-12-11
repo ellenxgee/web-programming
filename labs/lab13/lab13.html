@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Lab 13</title>
+    <meta charset="utf-8">
+    <style>
+      p b { color: pink; }
+      p + ol { font-variant: small-caps; }
+      div#idselect { font-family: "Courier New", Courier, monospace; }
+      .blue { color: blue; }
+      p.green { color: green; }
+      span { line-height: 3; }
+      p#indent { text-indent: 2em; }
+      p#horizontal-align { text-align: center; }
+      h2 { text-decoration: line-through; }
+      h3 { text-decoration: underline; }
+      p#toUpper { text-transform: uppercase; }
+      p#toLower {text-transform: lowercase; }
+      p#space { letter-spacing: 5px; }
+      p#shadow { text-shadow: .3em .3em .4em red; }
+      ul li { list-style-type: square; }
+      li#star { list-style-image: url(star.png); }
+      p#foreground { color: rgba(200,178,230,.75); }
+      p#background { background-color: #00FFFF; }
+      p#opacity { opacity: .5; }
+    </style>
+  </head>
+
+  <body>
+    <h1>Lab 13</h1>
+
+    <p>
+      <b>Descendant selector</b>
+    </p>
+
+    <ol>Next-sibling selector
+      <li>ul after p</li>
+    </ol>
+
+    <div id="idselect">
+      <p>ID selector</p>
+    </div>
+
+    <p class="blue">Class selector (blue)</p>
+    <em class="blue">Class selector (blue)</em>
+    <p class="green">Class selector (green)</p>
+
+    <span>
+      <p>Line height is 3<br>
+        You can tell because of how it is.</p>
+    </span>
+
+    <p id="indent">Adjusted the indent</p>
+    <p id="horizontal-align">Aligned center</p>
+
+    <h2>Text decoration (line-through)</h2>
+    <h3>Text decoration (underline)</h3>
+
+    <p id="toUpper">this is all lowercase, but will appear all uppercase because of css</p>
+    <p id="toLower">THIS IS ALL UPPERCASE, BUT WILL APPEAR ALL LOWERCASE BECAUSE OF CSS</p>
+    <p id="space">These letters have lots of space!</p>
+    <p id="shadow">Look at the cool shadowing!</p>
+
+    <ul>
+      <li>Wow look at that marker</li>
+      <li>A square</li>
+      <li>Pretty neat</li>
+
+      <li id="star">I can even use a star!</li>
+      <li id="star">Super fancy</li>
+    </ul>
+
+    <p id="foreground">Changed the foreground color using an RGBa color</p>
+    <p id="background">Changed the background color using a Hex color</p>
+    <p id="opacity">Changed the opacity of the element</p>
+  </body>
+</html>

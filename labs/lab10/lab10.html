@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Lab 10</title>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <h1 id="assignment">Lab 10</h1>
+    <p>
+      Ellen Gee<br>
+      Some of the work for this lab can be seen in the console log.
+    </p>
+
+    <label for="name">Full Name:</label>
+    <input type="text" id="fullname" name="fullname"><br>
+    <label for="bday">Birthday:</label>
+    <input type="date" id="bday" name="bday"><br>
+    <label for="astro">Astrological Sign:</label>
+    <input type="text" id="astro" name="astro" placeholder="Gemini"><br>
+    <label for="emailaddr">Email:</label>
+    <input type="email" id="emailaddr" name="emailaddr"><br>
+
+    <br>
+    <div id="new-div">
+      <div id="bye-bye">
+        <p>This text is going away</p>
+      </div>
+      <p id="note">Used appendChild, removeChild, and insertBefore</p>
+    </div>
+  </body>
+
+  <script>
+    $(document).ready(function()
+    {
+      console.log("getElementById: " + document.getElementById("assignment").innerHTML);
+
+      var inputs = document.getElementsByTagName("input");
+      for (var i=0;i<inputs.length;i++){
+        inputs[i].setAttribute("title", "input"+i);
+      }
+      for (var i=0;i<inputs.length;i++){
+        console.log(inputs[i].getAttribute("name") + " input title: " + inputs[i].getAttribute("title"));
+      }
+
+      var para = document.querySelectorAll("p");
+      console.log(para[0].innerHTML);
+
+      var newDiv = document.getElementById("new-div");
+      var newText = document.createTextNode("Appended text");
+      newDiv.appendChild(newText);
+      console.log("appendChild successful");
+
+      var byeDiv = document.getElementById("bye-bye");
+      newDiv.removeChild(byeDiv);
+      console.log("removeChild successful");
+
+      var para2 = document.getElementById("note");
+      var newHeading = document.createElement("h3");
+      var headingText = document.createTextNode("DOM Element Manipulation");
+      newHeading.appendChild(headingText);
+      newDiv.insertBefore(newHeading,para2);
+      console.log("insertBefore successful");
+
+      $("#assignment").attr("class","lab10");
+      console.log("assignment class: " + document.getElementById("assignment").getAttribute("class"));
+
+      $("[type='email']").attr("class","e-mail");
+      console.log("email class: " + document.getElementById("emailaddr").getAttribute("class"));
+    });
+  </script>
+</html>

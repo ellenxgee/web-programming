@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Lab 9</title>
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+    <h1>Lab 9</h1>
+    <p>
+      Ellen Gee<br>
+      Work for this lab can be seen in the console log.
+    </p>
+    <h2 onclick="hotdog.displayNutrition();">Hot Dog</h2>
+  </body>
+
+  <script>
+    function Student(name,sid,study) {
+      this.name = name;
+      this.sid = sid;
+
+      // array of fields of study study[0] being the major
+      this.study = study;
+    }
+    var newstudent = new Student('Ellen Gee',873226902,['Computer Science','Mathematics','Marketing']);
+    console.log("newstudent: " + newstudent.name + " " + newstudent.sid + " " + newstudent.study[0]);
+
+    var Food = {
+      cuisine: 'American',
+      name: 'unknown',
+      // nested object
+      nutrition: {
+        // primitive
+        cal: 0,
+        fat: '0 g',
+        sodium: '0 g',
+        protein: '0 g'
+      },
+      // functions
+      displayCuisine: function() {
+        console.log(this.cuisine);
+      },
+      displayNutrition: function() {
+        console.log(this.nutrition.cal + " calories, " +
+          this.nutrition.fat + " fat, " +
+          this.nutrition.sodium + " sodium, " +
+          this.nutrition.protein + " protein");
+      }
+    };
+    // display default nutrition
+    Food.displayNutrition();
+
+    // dynamically added field
+    Food["difficulty"] = 'low';
+    console.log("difficulty: " + Food.difficulty);
+
+    var hotdog = Object.create(Food);
+    hotdog.name = 'hot dog';
+    hotdog.nutrition = {cal: 151, fat: '13 g',sodium: '567 g', protein: '5 g'};
+    hotdog.displayNutrition();
+
+    // 2 window methods
+    alert("This is the work of " + newstudent.name);
+    confirm("Am I right, or am I right?");
+
+    // 3 event types
+    // onclick used in "Hot Dog" <h2> element above
+    window.onload = function() {
+      console.log("The page loaded");
+    }
+    function down() {
+      alert("You pressed something!");
+    }
+    window.addEventListener("keydown", down);
+  </script>
+</html>

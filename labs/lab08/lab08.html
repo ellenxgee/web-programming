@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Lab 8</title>
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+    <h1>Lab 8</h1>
+    <p>
+      Ellen Gee<br>
+      Work for this lab can be seen in the console log.
+    </p>
+  </body>
+
+  <script>
+    // variables declared using var and let
+    var x = 6;
+    console.log("Variable declared with var is " + x);
+    let y = 20;
+    console.log("Variable declared with let is " + y);
+
+    // four of the literal types including array and object
+    var family = ["Harley","Karen","Laura","Ellen","Spencer"];
+    console.log("Array literal: " + family);
+    var sister = {
+      name: "Laura",
+      birth_year: 1995
+    };
+    console.log("Object literal sister, name: " + sister.name + ", birth year: " + sister.birth_year);
+    var z = 0b1111;
+    console.log("Integer literal: " + z);
+    var isBool = true;
+    console.log("Boolean literal: " + isBool);
+
+    // if/else statement
+    if (isBool) {
+      console.log("if/else statement statement1");
+    } else {
+      console.log("if/else statement statement2");
+    }
+
+    // for loop
+    for (var i = 0; i < family.length; i++)
+    {
+      console.log("for loop - family[" + i + "]: " + family[i]);
+    }
+
+    // while loop
+    while (isBool)
+    {
+      if (x < 10)
+      {
+        x++;
+      } else {
+        isBool = false;
+      }
+      console.log("while loop - " + isBool);
+    }
+
+    // for of loop
+    for (var i of family)
+    {
+      console.log("for of loop - " + i);
+    }
+
+    // function
+    function mult2(x, y)
+    {
+      return x * y;
+    }
+    console.log("function mult2: " + mult2(x, y));
+  </script>
+</html>
